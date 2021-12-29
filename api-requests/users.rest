@@ -1,0 +1,25 @@
+@hostname = localhost
+
+@port = 5000
+
+@host = {{hostname}}:{{port}}
+
+@protocol = http://
+
+@url = {{protocol}}{{host}}
+
+GET {{url}}/api/users/test
+
+
+###
+###GET api/users
+
+POST {{url}}/api/users
+Content-Type: application/json
+
+{
+    "name": "test",
+    "email": "sohan@ndub.edu.bd",
+    "password": "123456",
+    "isAdmin": true
+}
